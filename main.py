@@ -177,9 +177,6 @@ G = nx.Graph()
 N = len(theta)
 R = N/(2*math.pi) # On S1 this is the formula, constant for each coarsening step
 #C = 1
-#k_bar = 2#int(input('Enter the desired average degree: '))
-#R = -(2/C)*math.log(math.pi*k_bar/(8*N))
-
 
 #position = {}
 # Distributing the nodes
