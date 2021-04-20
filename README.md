@@ -1,4 +1,4 @@
-# Clustering algorithms
+# Renormalization algorithms
 
 ## Introduction
 
@@ -7,7 +7,7 @@ The code and files here contained are part of an undergraduate research project 
 
 ## Folders structure:
 
-The `clustering_benchmark.py` python script applies three famous clustering algorithms to some real networks, obtained from the website in the references [[2]](#2):
+The `main.py` python script runs the Mercator algorithm [[2]](#2) for the networks [[3]](#3) stored in the `data` folder in order to embed the nodes into the Hyperbolic space. After that, it renormalizes the network according to the procedure described in [[4]](#4):
 
 In the 'presentations' folder, I included miscellaneous presentations and pdfs produced by me during the course of the research project.
 
@@ -26,4 +26,10 @@ To run the main file of this repository, please clone it and run the following c
 https://www.gov.br/cnpq/pt-br
 
 <a id="2">[2]</a> 
+https://github.com/networkgeometry/mercator
+
+<a id="3">[3]</a> 
 http://networkrepository.com/
+
+<a id="4">[4]</a> 
+https://www.nature.com/articles/s41567-018-0072-5
