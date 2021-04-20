@@ -58,7 +58,7 @@ opencv-python==4.4.0.46
 packaging==20.3
 pandas==1.1.3
 PennyLane==0.14.1
-Pillow==7.2.0
+Pillow==8.1.1
 pquality==0.0.7
 PuLP==2.3.1
 pybind11==2.6.2
