@@ -1,4 +1,4 @@
-# Renormalization algorithms
+# Network renormalization algorithms
 
 ## Introduction
 
