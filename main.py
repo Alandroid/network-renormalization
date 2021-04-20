@@ -17,9 +17,10 @@ def search_clusters(key, dic):
 
 #emb = mktr.embed("karate_network.txt", output_name="rede_teste.txt")
 
-infile = 'karate_network.txt'
+infile = 'data/karate_network.txt'
 links_file = open(infile, 'r+')
-outfile = infile.split(".")[0] + "_step__0.pdf"
+outfile = "images/karate/" + infile.split("/")[1].split(".")[0] + "_step__0.pdf"
+
 
 theta = [
    1.44041,
