@@ -1,0 +1,81 @@
+# =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=
+# Embedding started at:  2021/04/09 4:24 UTC
+# Ended at:              2021/04/09 4:24 UTC
+# Elapsed CPU time:      0.166811 seconds
+# Edgelist file:         karate_network.txt
+#
+# Parameters
+#   - nb. vertices:      34
+#   - beta:              2.73663
+#   - mu:                0.0992981
+#   - radius_S1:         5.41127
+#   - radius_H2:         14.4531
+#   - kappa_min:         0.281491
+# =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=
+#        Vertex       Inf.Kappa       Inf.Theta    Inf.Hyp.Rad. 
+              1         56.9423         1.09326         3.83375 
+              2         45.6113         2.48578         4.27751 
+              3         60.0318         3.49229         3.72808 
+              4         7.88807         1.24044         7.78712 
+              5         2.23879         6.22279          10.306 
+              6         2.61644         6.03017          9.9942 
+              7         2.58138         6.02731         10.0212 
+              8         3.46155         1.43277         9.43439 
+              9         4.27749         4.74194         9.01109 
+             10        0.281491         3.56808         14.4531 
+             11         2.27206         6.23386         10.2765 
+             12        0.514065        0.843084         13.2486 
+             13        0.678981         1.18617         12.6922 
+             14         4.32674        0.956777          8.9882 
+             15        0.349198         3.60461         14.0221 
+             16        0.471099         3.68655         13.4232 
+             17        0.923964         6.00201          12.076 
+             18         1.20051         1.78192         11.5523 
+             19        0.629755         3.81203         12.8427 
+             20         2.40448         2.20266         10.1632 
+             21        0.520472          3.7313         13.2239 
+             22         1.21447         1.68226         11.5292 
+             23        0.731513         3.89535         12.5431 
+             24         1.16886          3.0598         11.6058 
+             25          1.0792         2.94055         11.7654 
+             26         1.03608          2.8213         11.8469 
+             27        0.407547         3.64231          13.713 
+             28         1.03963         2.59759         11.8401 
+             29        0.554263         3.75917         13.0981 
+             30          1.0293         2.73819         11.8601 
+             31         2.09138         4.69751         10.4422 
+             32         2.44801         2.42484         10.1273 
+             33         5.42777         5.16491         8.53477 
+             34         3.20537         4.85252         9.58817 
+#
+# =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=
+# Internal parameters and options
+#     ALREADY_INFERRED_PARAMETERS_FILENAME   
+#     BETA_ABS_MAX                           25
+#     BETA_ABS_MIN                           1.01
+#     CHARACTERIZATION_MODE                  false
+#     CHARACTERIZATION_NB_GRAPHS             100
+#     CLEAN_RAW_OUTPUT_MODE                  false
+#     CUSTOM_BETA                            false
+#     CUSTOM_INFERRED_COORDINATES            false
+#     CUSTOM_OUTPUT_ROOTNAME_MODE            false
+#     CUSTOM_SEED                            false
+#     EDGELIST_FILENAME:                     karate_network.txt
+#     EXP_CLUST_NB_INTEGRATION_MC_STEPS      600
+#     EXP_DIST_NB_INTEGRATION_STEPS          1000
+#     KAPPA_MAX_NB_ITER_CONV                 500
+#     KAPPA_POST_INFERENCE_MODE              true
+#     MAXIMIZATION_MODE                      true
+#     MIN_NB_ANGLES_TO_TRY                   100
+#     NUMERICAL_CONVERGENCE_THRESHOLD_1      0.01
+#     NUMERICAL_CONVERGENCE_THRESHOLD_2      5e-05
+#     NUMERICAL_CONVERGENCE_THRESHOLD_3      0.5
+#     NUMERICAL_ZERO                         1e-10
+#     QUIET_MODE                             false
+#     REFINE_MODE                            false
+#     ROOTNAME_OUTPUT:                       karate_network
+#     SEED                                   1617942295
+#     VALIDATION_MODE                        false
+#     VERBOSE_MODE                           false
+#     VERSION                                0.9
+# =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=

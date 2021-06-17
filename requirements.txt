@@ -45,7 +45,7 @@ Markdown==3.1.1
 markov-clustering==0.0.6.dev0
 MarkupSafe==1.1.0
 matplotlib==3.1.2
-mercator @ file:///mnt/c/Users/alana/Desktop/IC_Brum/Programas/Mercator/mercator
+mercator @ file: C:\Users\alana\Desktop\IC_Brum\Programas\Mercator\mercator
 more-itertools==4.2.0
 multivalued-dict==2.0.1
 networkx==2.5
@@ -70,7 +70,7 @@ Pygments==2.3.1
 PyGObject==3.36.0
 PyGSP==0.5.1
 pyparsing==2.4.7
-python-apt==2.0.0+ubuntu0.20.4.4
+python-apt==2.0.0+ubuntu0.20.4.5
 python-dateutil==2.8.1
 python-igraph==0.8.3
 python-louvain==0.14
