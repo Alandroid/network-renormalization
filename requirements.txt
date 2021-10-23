@@ -96,6 +96,6 @@ torch==1.7.1
 tqdm==4.50.2
 typing-extensions==3.7.4.3
 unattended-upgrades==0.1
-urllib3==1.25.8
+urllib3==1.26.5
 virtualenv==20.0.17
 zipp==1.0.0
