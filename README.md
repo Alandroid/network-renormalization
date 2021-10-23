@@ -2,7 +2,7 @@
 
 ## Introduction
 
-The code and files here contained are part of an undergraduate research project in the Complex Systems Group of the University of Campinas - Brazil, supported by a CNPQ-PIBIC scholarship [[1]](#1). There is an ongoing update.
+The code and files here contained are part of an undergraduate research project in the Complex Systems Group of the University of Campinas - Brazil, supported by a SAE-PIBIC scholarship [[1]](#1). There is an ongoing update.
 
 
 ## Folders structure:
