@@ -1,17 +1,22 @@
-import matplotlib 
-matplotlib.use('Agg') 
-from matplotlib import pylab as plt
+#!/usr/bin/env python
+"""
+Plot multi-graphs in 3D using the class MultilayerGraph.
+
+Code modified from Paul Brodersen's response to the following post:
+https://stackoverflow.com/questions/60392940/multi-layer-graph-in-networkx
+"""
+
+import matplotlib.pyplot as plt
+from matplotlib.colors import Normalize
 import networkx as nx
 import mercator
 
-import renormalizer
-import converter
+from utils import renormalizer, converter, multilayer_graph
 
 
-infile = 'karate_network'
-outfile = infile + "_step__0.pdf"
+infile = 'data/karate_network'
 
-#mercator.embed(infile + ".txt", infile + ".txt")
+mercator.embed(infile + ".txt", infile)
 parameters_json = converter.convert_to_json(infile)
 
 index_list = [node['index'] for node in parameters_json['nodes'].values()]
@@ -23,33 +28,28 @@ angles_dict = dict(zip(index_list, angles_list))
 kappas_dict = dict(zip(index_list, kappas_list))
 raidus_h2_dict = dict(zip(index_list, radius_h2_list))
 
-graphs, pos_nodes, membership_dict, kappas = renormalizer.renormalize_network(infile,
-                                                                              kappas_dict, 
-                                                                              angles_dict)
-membership_dict.append({}) # The last graph is plotted without clusters
 
-for i in range(len(graphs)):
-    plt.figure(figsize=(10, 10))
-    plt.axis('off')
-    
-    # membership_ordered = []
-    # for key in sorted(membership_list[i]): # TODO this code block is suitable for the old version
-    #     membership_ordered.append(membership_list[i][key])
+## Renormalization multilayer
+graphs, pos_nodes, membership_dict, kappas = renormalizer.renormalize_network(
+    infile,
+    kappas_dict, 
+    angles_dict
+)
+pdf_file_name = "results/multilayer_renormalization_rg.pdf"
 
-    membership_list = [v for (_,v) in membership_dict[i].items()]
-    degree_dict = dict(graphs[i].degree)
-    node_size_list = [100*deg+100 for deg in degree_dict.values()]
+fig = plt.figure()
+fig.set_figheight(25)
+fig.set_figwidth(20)
+ax = fig.add_subplot(111, projection='3d')
+multilayer_graph.MultilayerGraph(
+    graphs, ax=ax, layout=nx.spring_layout, 
+    positions_uniform=pos_nodes, clusters=membership_dict
+)
+ax.set_axis_off()
 
-    if membership_list:
-        nx.draw_networkx_nodes(graphs[i], pos_nodes[i], node_size=node_size_list,
-                               cmap=plt.cm.Spectral, node_color=membership_list)
-    else:
-        nx.draw_networkx_nodes(graphs[i], pos_nodes[i], node_size=node_size_list, 
-                               cmap=plt.cm.Spectral)
+plt.savefig(pdf_file_name)
+plt.close()
 
-    nx.draw_networkx_edges(graphs[i], pos_nodes[i], alpha=0.3)
-    #nx.draw_networkx_labels(graphs[i], pos_nodes[i])
 
-    outfile = outfile.split("__")[0] + "__" + str(i) + ".pdf"
-    plt.savefig(outfile)
-    plt.close()
+## TODO:
+# 1) Choose what to do w/ the last layer
