@@ -68,9 +68,8 @@ pygame==2.0.0
 pyglet==1.5.0
 Pygments==2.7.4
 PyGObject==3.36.0
-PyGSP==0.5.1
 pyparsing==2.4.7
-python-apt==2.0.0+ubuntu0.20.4.4
+pyserial==3.4
 python-dateutil==2.8.1
 python-igraph==0.8.3
 python-louvain==0.14
