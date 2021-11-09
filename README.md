@@ -2,12 +2,12 @@
 
 ## Introduction
 
-The code and files here contained are part of an undergraduate research project in the Complex Systems Group of the University of Campinas - Brazil, supported by a SAE-PIBIC scholarship [[1]](#1). There is an ongoing update.
+The code and files here contained are part of an undergraduate research project in the Complex Systems Group of the University of Campinas - Brazil, supported by a SAE-PIBIC scholarship [[1]](#1). There is an ongoing update, and some files are WIP.
 
 
 ## Folders structure:
 
-The `main.py` python script runs the Mercator algorithm [[2]](#2) for the networks [[3]](#3) stored in the `data` folder in order to embed the nodes into the Hyperbolic space. After that, it renormalizes the network according to the procedure described in [[4]](#4):
+The `main.py` python script runs the Mercator algorithm [[2]](#2) for the networks [[3]](#3) stored in the `data` folder in order to embed the nodes into the Hyperbolic space. After that, it renormalizes the network according to the procedure described in [[4]](#4), and outputs the result into the `results` folder:
 
 In the 'presentations' folder, I included miscellaneous presentations and pdfs produced by me during the course of the research project.
 
