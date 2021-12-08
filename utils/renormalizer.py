@@ -273,7 +273,7 @@ def renormalize_network(infile, kappas, angles):
     links = read_links(infile)
 
     r = int(input('Enter the desired cluster size: '))
-    total_renorm_steps = int(input('How many renormalization steps do you want to perform? '))
+    total_renorm_steps = 1 + int(input('How many renormalization steps do you want to perform? '))
     beta = 2 #int(input('Enter the beta coefficient: '))
     # TODO do not hardcode this
 

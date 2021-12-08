@@ -14,7 +14,7 @@ import mercator
 from utils import renormalizer, converter, multilayer_graph
 
 
-infile = 'data/karate_network'
+infile = 'data/c_elegans_bin_edges'
 
 mercator.embed(infile + ".txt", infile)
 parameters_json = converter.convert_to_json(infile)
@@ -28,14 +28,16 @@ angles_dict = dict(zip(index_list, angles_list))
 kappas_dict = dict(zip(index_list, kappas_list))
 raidus_h2_dict = dict(zip(index_list, radius_h2_list))
 
-
 ## Renormalization multilayer
 graphs, pos_nodes, membership_dict, kappas = renormalizer.renormalize_network(
     infile,
     kappas_dict, 
     angles_dict
 )
-pdf_file_name = "results/multilayer_renormalization_rg.pdf"
+pdf_file_name = "results/multilayer_renormalization_" + infile.split("/")[1] + ".pdf"
+
+for i in range(len(graphs)):
+    converter.convert_edgefile_to_adj(graphs[i], infile, i)
 
 fig = plt.figure()
 fig.set_figheight(25)
