@@ -1,0 +1,122 @@
+
+===========================================================================================
+Mercador: accurate embeddings of graphs in the S1 space
+version: 0.9
+started on: 2021/12/29 2:55 UTC
+edgelist filename: data/c_elegans_bin_edges.txt
+seed: 1640746545
+
+Loading edgelist......................................................................done.
+
+Checking number of connected components...............................................done.
+
+Analyzing degrees.....................................................................done.
+
+Computing local clustering............................................................done.
+
+Ordering vertices.....................................................................done.
+
+Properties of the graph
+    Nb vertices:                    279
+    Nb edges:                       2287
+    Average degree:                 16.39
+    Minimum degree:                 2
+    Maximum degree:                 93
+    Nb of degree class:             46
+    Average clustering:             0.3371
+
+Inferring parameters...
+           beta      avg. clustering 
+         2.9565               0.6001 
+         1.9782               0.4539 
+         1.4891               0.3452 
+                       ...............................................................done.
+
+Inferred ensemble (random positions)
+    Average degree:                 16.3943
+    Minimum degree:                 2
+    Maximum degree:                 93
+    Average clustering:             0.3452
+    Parameters
+      - beta:                       1.4891
+      - mu:                         0.0124
+      - radius_S1 (R):              44.4042
+
+Finding initial positions/ordering...
+    Building the weights matrix... Matrix built.
+
+    Computing eigenvectors using Spectra parameter ncv = 7... Convergence reached.
+
+    Sum of the angular positions (before adjustment): 12.4218
+                                     .................................................done.
+
+Refining the positions...
+    ...of vertices    [1,13]......done in 0.1063 seconds (11/13 changed position)
+    ...of vertices   [14,26]......done in 0.1021 seconds (13/13 changed position)
+    ...of vertices   [27,39]......done in 0.1016 seconds (12/13 changed position)
+    ...of vertices   [40,52]......done in 0.0997 seconds (13/13 changed position)
+    ...of vertices   [53,65]......done in 0.1007 seconds (11/13 changed position)
+    ...of vertices   [66,78]......done in 0.0980 seconds ( 9/13 changed position)
+    ...of vertices   [79,91]......done in 0.1005 seconds (11/13 changed position)
+    ...of vertices  [92,104]......done in 0.0984 seconds (10/13 changed position)
+    ...of vertices [105,117]......done in 0.0979 seconds (10/13 changed position)
+    ...of vertices [118,130]......done in 0.0951 seconds (11/13 changed position)
+    ...of vertices [131,143]......done in 0.0953 seconds (12/13 changed position)
+    ...of vertices [144,156]......done in 0.0951 seconds ( 9/13 changed position)
+    ...of vertices [157,169]......done in 0.0976 seconds ( 8/13 changed position)
+    ...of vertices [170,182]......done in 0.0937 seconds (13/13 changed position)
+    ...of vertices [183,195]......done in 0.0941 seconds ( 9/13 changed position)
+    ...of vertices [196,208]......done in 0.0936 seconds (11/13 changed position)
+    ...of vertices [209,221]......done in 0.0924 seconds ( 7/13 changed position)
+    ...of vertices [222,234]......done in 0.0928 seconds (10/13 changed position)
+    ...of vertices [235,247]......done in 0.0927 seconds ( 9/13 changed position)
+    ...of vertices [248,260]......done in 0.0933 seconds (11/13 changed position)
+    ...of vertices [261,273]......done in 0.0908 seconds ( 6/13 changed position)
+    ...of vertices [274,279]......done in 0.0408 seconds ( 2/ 6 changed position)
+                         .............................................................done.
+
+Updating values of kappa based on inferred positions...
+    Convergence reached after 13 iterations.
+                                                       ...............................done.
+
+    => Inferred coordinates saved to data/c_elegans_bin_edges.inf_coord
+
+Internal parameters and options
+    ALREADY_INFERRED_PARAMETERS_FILENAME   
+    BETA_ABS_MAX                           25
+    BETA_ABS_MIN                           1.01
+    CHARACTERIZATION_MODE                  false
+    CHARACTERIZATION_NB_GRAPHS             100
+    CLEAN_RAW_OUTPUT_MODE                  false
+    CUSTOM_BETA                            false
+    CUSTOM_CHARACTERIZATION_NB_GRAPHS      false
+    CUSTOM_INFERRED_COORDINATES            false
+    CUSTOM_OUTPUT_ROOTNAME_MODE            true
+    CUSTOM_SEED                            false
+    EDGELIST_FILENAME:                     data/c_elegans_bin_edges.txt
+    EXP_CLUST_NB_INTEGRATION_MC_STEPS      600
+    EXP_DIST_NB_INTEGRATION_STEPS          1000
+    KAPPA_MAX_NB_ITER_CONV                 500
+    KAPPA_POST_INFERENCE_MODE              true
+    MAXIMIZATION_MODE                      true
+    MIN_NB_ANGLES_TO_TRY                   100
+    NUMERICAL_CONVERGENCE_THRESHOLD_1      0.01
+    NUMERICAL_CONVERGENCE_THRESHOLD_2      5e-05
+    NUMERICAL_CONVERGENCE_THRESHOLD_3      0.5
+    NUMERICAL_ZERO                         1e-10
+    QUIET_MODE                             false
+    REFINE_MODE                            false
+    ROOTNAME_OUTPUT:                       data/c_elegans_bin_edges
+    SEED                                   1640746545
+    VALIDATION_MODE                        false
+    VERBOSE_MODE                           false
+    VERSION                                0.9
+
+Ended on: 2021/12/29 2:55 UTC
+Elapsed CPU time (embedding):                5.2381 seconds
+    initialization:                          0.0159 seconds
+    parameters inference:                    3.1117 seconds
+    initial positions:                       0.0212 seconds
+    refining positions:                      2.0746 seconds
+    adjusting kappas:                        0.0146 seconds
+===========================================================================================

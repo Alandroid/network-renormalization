@@ -33,12 +33,12 @@ def renormalize_nodes(cluster_kappas, cluster_angles, beta):
     # Renormalizing the hidden degrees
     for i in cluster_kappas:
         kappas = np.array(list(cluster_kappas[i].values())) ###[1:]
-        renormalized_kappas[i] = np.sum(kappas**beta)**(1/beta)
-       
+        renormalized_kappas[i] = np.sum(kappas**beta)**(1.0/beta)
+
     # Renormalizing the angles
     for i in cluster_angles:
-        angles = np.array(list(cluster_angles[i].values())) ###[1:]
-        kappas = np.array(list(cluster_kappas[i].values())) ###[1:]
+        angles = np.array(list(cluster_angles[i].values()))
+        kappas = np.array(list(cluster_kappas[i].values()))
 
         numerator = (angles**beta).dot(kappas**beta)
         denominator = renormalized_kappas[i]
@@ -265,7 +265,7 @@ def store_membership(cluster_angles):
     return membership
 
 
-def renormalize_network(infile, kappas, angles):
+def renormalize_network(infile, kappas, angles, beta):
     graphs = []
     pos_nodes = []
     membership_list = []
@@ -274,8 +274,6 @@ def renormalize_network(infile, kappas, angles):
 
     r = int(input('Enter the desired cluster size: '))
     total_renorm_steps = 1 + int(input('How many renormalization steps do you want to perform? '))
-    beta = 2 #int(input('Enter the beta coefficient: '))
-    # TODO do not hardcode this
 
     for renorm_step in range(total_renorm_steps + 1):
         # Form the new network
