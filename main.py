@@ -13,11 +13,13 @@ import mercator
 
 from utils import renormalizer, converter, multilayer_graph
 
+path = str(input('What\'s the name of the input file? (It should be inside the \'data\' folder)\n'))
 
-infile = 'data/karate_network'
+infile = 'data/' + path
 
-mercator.embed(infile + ".txt", infile)
+# mercator.embed(infile + ".txt", infile)
 parameters_json = converter.convert_to_json(infile)
+beta = converter.get_beta(infile)
 
 index_list = [node['index'] for node in parameters_json['nodes'].values()]
 angles_list = [node['theta'] for node in parameters_json['nodes'].values()]
@@ -26,16 +28,19 @@ radius_h2_list = [node['r'] for node in parameters_json['nodes'].values()]
 
 angles_dict = dict(zip(index_list, angles_list))
 kappas_dict = dict(zip(index_list, kappas_list))
-raidus_h2_dict = dict(zip(index_list, radius_h2_list))
-
+radius_h2_dict = dict(zip(index_list, radius_h2_list))
 
 ## Renormalization multilayer
 graphs, pos_nodes, membership_dict, kappas = renormalizer.renormalize_network(
     infile,
-    kappas_dict, 
-    angles_dict
+    kappas_dict,
+    angles_dict,
+    beta
 )
-pdf_file_name = "results/multilayer_renormalization_rg.pdf"
+pdf_file_name = "results/multilayer_renormalization_" + infile.split("/")[1] + ".pdf"
+
+for i in range(len(graphs)):
+    converter.convert_edgefile_to_adj(graphs[i], infile, i)
 
 fig = plt.figure()
 fig.set_figheight(25)
