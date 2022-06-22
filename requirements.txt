@@ -51,7 +51,7 @@ multivalued-dict==2.0.1
 networkx==2.5
 nf1==0.0.3
 nltk==3.6.5
-numpy==1.20.1
+numpy==1.22.0
 olefile==0.46
 omega-index-py3==0.3
 opencv-python==4.4.0.46
