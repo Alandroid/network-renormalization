@@ -6,7 +6,7 @@ bimlpa==0.1.2
 cairocffi==1.1.0
 catkin-pkg==0.4.16
 cdlib==0.1.9
-certifi==2020.6.20
+certifi==2022.12.7
 cffi==1.14.2
 chardet==3.0.4
 chinese-whispers==0.7.3
